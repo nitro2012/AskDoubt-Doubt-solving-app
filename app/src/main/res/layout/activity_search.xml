@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".SearchActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#e6cc00"
+        android:elevation="4dp" />
+    <com.mancj.materialsearchbar.MaterialSearchBar
+
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="20dp"
+
+        android:background="#FFC107"
+        app:mt_dividerColor="#FFC107"
+        android:backgroundTint="#FFC107"
+        app:mt_hintColor="@color/black"
+        app:mt_hint="Search"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_speechMode="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/notFound"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No answers found for this search !"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Ask a question"
+            android:backgroundTint="#FFC107"
+            android:layout_marginTop="20dp"
+            android:id="@+id/askQuestionButton"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postRecSearch"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBar"
+
+        android:visibility="gone"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="32dp" />
+</RelativeLayout>

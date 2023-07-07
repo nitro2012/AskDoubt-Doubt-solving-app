@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AskDoubt</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <string-array name="topics">
+
+        <item>select topic</item>
+        <item>Finance</item>
+        <item>Sports</item>
+        <item>Food</item>
+
+
+    </string-array>
+</resources>
